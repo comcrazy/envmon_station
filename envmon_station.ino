@@ -47,7 +47,7 @@ void setup() {
   pinMode(REF_3V3_APIN, INPUT);
   pinMode(REF_5V_APIN, INPUT);
 
-  deviceID = DEVICE_TWO;
+  deviceID = DEVICE_ONE;
   lastDHTReadingTimestamp = 0;
   lastSensorReadingTimestamp = 0;
 
@@ -56,8 +56,10 @@ void setup() {
   uvValue = 0;
   Serial.begin(9600);
 
-  Serial.print("Environent Monitoring Station ID :");
+  Serial.print("Health Sensor Station ID :");
   Serial.println(deviceID);
+  Serial.print("DHT LIBRARY VERSION: ");
+  Serial.println(DHT_LIB_VERSION);
   Serial.println();
 
   Serial.println("=============== Setup Start ===============");
